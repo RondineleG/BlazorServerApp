@@ -1,0 +1,35 @@
+﻿@page "/players/detail/{id:int}"
+
+@if (Player != null)
+{
+    <div class="row">
+        <div class="col-lg-9">
+            <h1>@Player.Name</h1>
+        </div>
+        <div class="col-lg-3 text-right">
+            <a class="btn btn-secondary btn-sm" href="/players" role="button">Go Back To List</a>
+        </div>
+    </div>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th scope="row">Shirt No</th>
+            <td>@Player.ShirtNo</td>
+        </tr>
+        <tr>
+            <th scope="row">Position</th>
+            <td>@Player.Position?.Name</td>
+        </tr>
+        <tr>
+            <th scope="row">Appearances</th>
+            <td>@Player.Appearances</td>
+        </tr>
+        <tr>
+            <th scope="row">Goals</th>
+            <td>@Player.Goals</td>
+        </tr>
+        </tbody>
+    </table>
+}
+
